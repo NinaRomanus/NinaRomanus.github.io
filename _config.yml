@@ -1,1 +1,65 @@
 
+# Site
+title:              Nina
+bio:                'Beskringingstitel'
+description:        "Beskringings texten "
+locale:             sv_SE
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+teaser: 400x250.png # 400x250 px default teaser image used in image archive grid
+
+
+# Jekyll
+permalink:          /blog/:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+# Comments
+#disqus_shortname:   default
+
+# Social
+#analytics-id:       "default"
+#twitter:            default
+#facebook:           default
+#instagram:          default
+#github:             default
+
+# personal
+location:           adress
+email:              nina@romanus.se
+
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate-v2
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: '/notiser/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Exclude list
+exclude: [README.md]
+
+include:
+  - _redirects
+ 
+# set to 'true' to enable Netlify CMS (/admin) in production builds
+netlifycms: true
